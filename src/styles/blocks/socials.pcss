@@ -1,6 +1,31 @@
 .socials {
     display: flex;
     align-items: center;
+
+    &--rounded {
+        .socials__link {
+            border-radius: 50%;
+            border: 1px solid #ccc;
+            width: 50px;
+            height: 50px;
+            position: relative;
+
+            .socials__icon {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 20px;
+                height: 20px;
+            }
+
+            &:hover {
+                .socials__icon {
+                    fill: blue;
+                }
+            }
+        }
+    }
 }
 
 .socials__item {

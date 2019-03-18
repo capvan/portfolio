@@ -55,9 +55,9 @@ html(lang="en")
                           ['Родился', '10 октября 1990'],
                         ]
                       each row in data
-                          tr.user__data-row
-                            td.user__data-cell #{row[0]}
-                            td.user__data-cell #{row[1]}
+                        tr.user__data-row
+                          td.user__data-cell #{row[0]}
+                          td.user__data-cell #{row[1]}
               .about__right
                 .about__welcome Привет, меня зовут
                 .about__username Сергей Кривенко
@@ -66,33 +66,89 @@ html(lang="en")
                   p Мне нравится делать интересные и современные проекты.
                 .about__ps
                   p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво! 
-          .triangles
-            svg.triangles__item.triangles__item--left(viewBox="0 0 1000 100" preserveAspectRatio="none")
-              polygon(
-                points="0,0 0,100 1000,100"
-              )
-            svg.triangles__item.triangles__item--right(viewBox="0 0 1000 100" preserveAspectRatio="none")
-              polygon(
-                points="0,100 1000,100 1000,0"
-              )
-          section.values
-            .container
-              .values__title
-                h2.section-title Чем я могу быть полезен вам
-                .values__desc
-                  p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
-              ul.user-skills__item
-                .skills-row
-                  h3.skills-row__title Front-end
+        .triangles
+          svg.triangles__item.triangles__item--left(viewBox="0 0 1000 100" preserveAspectRatio="none")
+            polygon(
+              points="0,0 0,100 1000,100"
+            )
+          svg.triangles__item.triangles__item--right(viewBox="0 0 1000 100" preserveAspectRatio="none")
+            polygon(
+              points="0,100 1000,100 1000,0"
+            )
+        section.values
+          .container
+            .values__title
+              h2.section-title.values__title-text.section-title--small Чем я могу быть полезен вам
+              .values__desc
+                p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+            ul.user-skills
+              - 
+                var skills = [
+                  ['Front-end', ['HTML5', 'CSS3', 'JavaScript', 'JQuery и Vue.js']],
+                  ['Workflow', ['Git', 'Terminal', 'Gulp', 'Webpack']],
+                ]
+              each item in skills
+                li.user-skills__item.skills-row
+                  h3.skills-row__title #{item[0]}
                   ul.skills-row__list
-                    li.skills-row__item
-                      .skill
-                        svg(viewBox="0 0 200 200" preserveAspectRatio="none").skill__shape
-                          circle(
-                            r="100" cx="100" cy="100"
-                          ).skill__circle.skill__circle--under
-                          circle().skill__circle.skill__circle--above
-                          linear-gradient()
-                        .skill__title HTML5
+                    each skill in item[1]
+                      li.skills-row__item
+                        .skill
+                          svg(viewBox="0 0 200 200" preserveAspectRatio="none").skill__shape
+                            circle(
+                              r="50" cx="100" cy="100"
+                            ).skill__circle.skill__circle--under
+                            circle().skill__circle.skill__circle--above
+                            linear-gradient()
+                          .skill__title #{skill}
+            .bottom-section
+              section.reviews
+                .reviews__title
+                  .section-title Что обо мне говорят
+                  .reviews__slider-controls
+                ul.reviews__slider
+                  - for (var i = 0; i < 2; i++)
+                    li.reviews__slider-item
+                      .quote
+                        .quote__text
+                        .quote__author
+                          .user.user-horizontal
+                            .user__avatar
+                              img(src="", alt="").user__avatar-pic
+                            .user__data
+                              .user__name Ковальчук Дмитрий
+                              .user__occ Основатель Loftschool
+                  li.reviews__slider-item
+              section.form
+
+        footer.footer
+          .container.footer__container
+            .footer__copyright
+              .copyright
+                .copyright__year 2019
+                .copyright__username Сергей Кривенко
+                .copyright__desc Личный сайт
+            .footer__data
+              .footer__menu
+                nav.nav.nav--color-white
+                    ul.nav__list
+                      each item in menu
+                        li.nav__item
+                          a(href="").nav__link #{item}
+              .footer__data-columns
+                .footer__data-col
+                  article.footer__text
+                    | Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool
+                  ul.footer__social.socials.socials--rounded
+                    each item in socials
+                      li.socials__item
+                        a(href='').socials__link
+                          +icon(`${item}`, 'socials__icon')
+                .footer__data-col
+                  article.footer__text
+                    p Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает где вы живете
+                    p Martin Golding
+
+
 
           
