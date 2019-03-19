@@ -41,18 +41,18 @@ html(lang="en")
               .hero__bottom-buttons
                 .scroll-down-button Скролл
           section.about
-            .container
+            .container.about__container
               .about__left
                 .user
                   .user__avatar
-                    img(src="", alt="").user__avatar-pic
+                    img(src="./src/images/content/user.jpg", alt="аватар").user__avatar-pic
                   .user__data
                     table.user__data-table
                       - 
                         var data = [
-                          ['Проживаю', 'Москва'],
-                          ['Возраст', '28 лет'],
-                          ['Родился', '10 октября 1990'],
+                          ['Проживаю:', 'Москва'],
+                          ['Возраст:', '28 лет'],
+                          ['Родился:', '10 октября 1990'],
                         ]
                       each row in data
                         tr.user__data-row
