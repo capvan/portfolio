@@ -125,13 +125,14 @@ html(lang="en")
           .container.footer__container
             .footer__copyright
               .copyright
-                .copyright__year 2019
+                .copyright__year © 2019
                 .copyright__username Сергей Кривенко
                 .copyright__desc Личный сайт
             .footer__data
               .footer__menu
                 nav.nav.nav--color-white
                     ul.nav__list
+                      - var menu = ['Главная', 'Обо мне', 'Навыки', 'Работы', 'Отзывы', 'Связаться'];
                       each item in menu
                         li.nav__item
                           a(href="").nav__link #{item}
