@@ -124,15 +124,16 @@ html(lang="en")
                 form(action="").form
                   .form__row
                     label(for="").form__block
-                      .form__block-title Введите ваше имя
+                      .form__block-title.form__block-title--first Введите ваше имя
                       input(type="text" placeholder="Ковальчук Дмитрий").form__block-input
                     label(for="").form__block
-                      .form__block-title Введите ваш e-mail
-                      input(type="text" placeholder="loftschool@study.com")
+                      .form__block-title.form__block-title--second Введите ваш e-mail
+                      input(type="text" placeholder="loftschool@study.com").form__block-input
                   .form__row
                     label(for="").form__block
-                      .form__block-title Сообщение к письму
-                      input(type="text" placeholder="Требуется ваша помощьв создании сайта. \n Интересуют срокии цена вопроса").form__block-input 
+                      .form__block-title.form__block-title--third Сообщение к письму
+                      input(type="text" placeholder="Требуется ваша помощь в создании сайта. \n Интересуют сроки и цена вопроса").form__block-input
+                  button(type='submit').button Отправить
         footer.footer
           .container.footer__container
             .footer__copyright
