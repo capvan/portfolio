@@ -1,3 +1,51 @@
 .reviews__title {
     margin-bottom: 30px;
 }
+
+.reviews__slider {
+    display: flex;
+    flex-direction: row;
+    // justify-content: flex-end;
+}
+
+.reviews__slider-item {
+    display: flex;
+    // flex-direction: column;
+    width: 30%;
+    margin-left: 10%;
+
+    &::before {
+        content: svg-load('quote.svg', fill=$text-color, width=69px, height=58px);
+    }
+}
+
+.user-horizontal {
+    display: flex;
+    align-items: center;
+}
+.user__data {
+    margin-left: 20px;
+}
+
+.quote__text,
+.user__occ {
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.88;
+    letter-spacing: normal;
+    text-align: left;
+    color: rgba(65, 76, 99, 0.5);
+}
+
+.user__name {
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2.67;
+    letter-spacing: normal;
+    text-align: left;
+    color: #414c63;
+}
