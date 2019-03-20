@@ -119,7 +119,20 @@ html(lang="en")
                               .user__name Ковальчук Дмитрий
                               .user__occ Основатель Loftschool
               section.form
-
+                .reviews__title
+                  .section-title Связаться со мной
+                form(action="").form
+                  .form__row
+                    label(for="").form__block
+                      .form__block-title Введите ваше имя
+                      input(type="text" placeholder="Ковальчук Дмитрий").form__block-input
+                    label(for="").form__block
+                      .form__block-title Введите ваш e-mail
+                      input(type="text" placeholder="loftschool@study.com")
+                  .form__row
+                    label(for="").form__block
+                      .form__block-title Сообщение к письму
+                      input(type="text" placeholder="Требуется ваша помощьв создании сайта. \n Интересуют срокии цена вопроса").form__block-input 
         footer.footer
           .container.footer__container
             .footer__copyright
