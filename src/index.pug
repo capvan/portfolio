@@ -104,6 +104,39 @@ html(lang="en")
                             linear-gradient()
                           .skill__title #{skill}
             .bottom-section
+              section.works
+                .container.works__container
+                  .section-title Мои работы
+                  .works__content
+                    .works-slider
+                      .works-slider__bigslider
+                        img(src="/src/images/content/slider.jpg", alt="слайдер").works-slider__bigslider-pic
+                      ul.works-slider__smallslider
+                        li.works-slider__smallslide-item
+                          a.works-slider__smallslider-link(href="#")
+                            img(src="/src/images/content/slider1.jpg", alt="слайдер1")
+                        li.works-slider__smallslide-item
+                          a.works-slider__smallslider-link(href="#")
+                            img(src="/src/images/content/slider2.jpg", alt="слайдер2")
+                        li.works-slider__smallslide-item
+                          a.works-slider__smallslider-link(href="#")
+                            img(src="/src/images/content/slider3.jpg", alt="слайдер3")
+                      .works-slider__buttons
+                        a(href="#").works-slider__btn.works-slider__bt-next
+                        a(href="").works-slider__btn.works-slider__bt-prev
+                    .works-slider__data
+                      ul.level
+                        li.level__item
+                          .level__desc Html
+                        li.level__item
+                          .level__desc CSS
+                        li.level__item
+                          .level__desc Javascript
+                      h2.section-title.section-title--small Сайт школы образования
+                      .works-slider__desc
+                        p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                      .works-slider__link
+                        a(href="#").works-slider__link-link Посмотреть сайт
               section.reviews
                 .reviews__title
                   .section-title Что обо мне говорят
