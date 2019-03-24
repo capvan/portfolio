@@ -74,7 +74,9 @@
   display: flex;
 
   &::after {
-    content: url('/src/images/icons/scroll.svg');
+    content: "";
+    background: svg-load('scroll.svg', fill=#414c63, width=100%, height=100%) center center no-repeat;
+    // content: url('/src/images/icons/scroll.svg');
     background-size: 28px 28px;
     height: 28px;
     width: 28px;

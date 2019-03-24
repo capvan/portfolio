@@ -19,7 +19,12 @@
     margin-left: 10%;
 
     &::before {
-        content: svg-load('quote.svg', fill=$text-color, width=69px, height=58px);
+        // content: svg-load('quote.svg', fill=$text-color, width=69px, height=58px);
+        content: "";
+        background: svg-load('quote.svg', fill=#414c63, width=69px, height=59px) top center no-repeat;
+        display: flex;
+        width: 100%;
+        opacity: .05;
     }
 }
 

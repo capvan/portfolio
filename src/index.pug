@@ -48,16 +48,29 @@ html(lang="en")
                     img(src="./src/images/content/user.jpg", alt="аватар").user__avatar-pic
                   .user__data
                     table.user__data-table
-                      - 
-                        var data = [
-                          ['Проживаю:', 'Москва'],
-                          ['Возраст:', '28 лет'],
-                          ['Родился:', '10 октября 1990'],
-                        ]
-                      each row in data
-                        tr.user__data-row
-                          td.user__data-cell #{row[0]}
-                          td.user__data-cell #{row[1]}
+                      //- - 
+                      //-   var data = [
+                      //-     ['Проживаю:', 'Москва'],
+                      //-     ['Возраст:', '28 лет'],
+                      //-     ['Родился:', '10 октября 1990'],
+                      //-   ]
+                      //- each row in data
+                      //-   tr.user__data-row
+                      //-     td.user__data-cell #{row[0]}
+                      //-     td.user__data-cell #{row[1]}
+                      tbody
+                        tr
+                          td.user-table__title Проживаю:
+                          td.user-table__desc Москва
+                        tr
+                        tr
+                          td.user-table__title Возраст:
+                          td.user-table__desc 28 лет
+                        tr
+                        tr
+                          td.user-table__title Родился:
+                          td.user-table__desc 10 октября 1990
+                        tr
               .about__right
                 .about__welcome Привет, меня зовут
                 .about__username Сергей Кривенко
@@ -109,7 +122,7 @@ html(lang="en")
                   .section-title Мои работы
                   .works__content
                     .works-slider
-                      .works-slider__bigslider(data-slide='2')
+                      .works-slider__bigslider(data-slide='3')
                         img(src="/src/images/content/slider.jpg", alt="слайдер").works-slider__bigslider-pic
                       ul.works-slider__smallslider
                         li.works-slider__smallslide-item
