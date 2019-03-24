@@ -94,12 +94,12 @@ html(lang="en")
                     each skill in item[1]
                       li.skills-row__item
                         .skill
-                          svg(viewBox="0 0 200 200" preserveAspectRatio="none").skill__shape
+                          svg(viewBox="0 0 100 100" preserveAspectRatio="none").skill__shape
                             circle(
-                              r="50" cx="100" cy="100"
+                              r="40" cx="50" cy="50"
                             ).skill__circle.skill__circle--under
                             circle(
-                              r="50" cx="100" cy="100"
+                              r="40" cx="50" cy="50"
                               ).skill__circle.skill__circle--above
                             linear-gradient()
                           .skill__title #{skill}
@@ -109,21 +109,21 @@ html(lang="en")
                   .section-title Мои работы
                   .works__content
                     .works-slider
-                      .works-slider__bigslider
+                      .works-slider__bigslider(data-slide='2')
                         img(src="/src/images/content/slider.jpg", alt="слайдер").works-slider__bigslider-pic
                       ul.works-slider__smallslider
                         li.works-slider__smallslide-item
                           a.works-slider__smallslider-link(href="#")
-                            img(src="/src/images/content/slider1.jpg", alt="слайдер1")
+                            img(src="/src/images/content/slider1.jpg", alt="слайдер1").works-slider__smallslider-pic
                         li.works-slider__smallslide-item
                           a.works-slider__smallslider-link(href="#")
-                            img(src="/src/images/content/slider2.jpg", alt="слайдер2")
+                            img(src="/src/images/content/slider2.jpg", alt="слайдер2").works-slider__smallslider-pic
                         li.works-slider__smallslide-item
                           a.works-slider__smallslider-link(href="#")
-                            img(src="/src/images/content/slider3.jpg", alt="слайдер3")
+                            img(src="/src/images/content/slider3.jpg", alt="слайдер3").works-slider__smallslider-pic
                       .works-slider__buttons
-                        a(href="#").works-slider__btn.works-slider__bt-next
-                        a(href="").works-slider__btn.works-slider__bt-prev
+                        a(href="#").works-slider__btn.works-slider__btn--next
+                        a(href="").works-slider__btn.works-slider__btn--prev
                     .works-slider__data
                       ul.level
                         li.level__item
@@ -132,7 +132,7 @@ html(lang="en")
                           .level__desc CSS
                         li.level__item
                           .level__desc Javascript
-                      h2.section-title.section-title--small Сайт школы образования
+                      h2.section-title.section-title--small.section-title--small__left Сайт школы образования
                       .works-slider__desc
                         p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
                       .works-slider__link
@@ -167,7 +167,7 @@ html(lang="en")
                   .form__row
                     label(for="").form__block
                       .form__block-title.form__block-title--third Сообщение к письму
-                      input(type="text" placeholder="Требуется ваша помощь в создании сайта. \n Интересуют сроки и цена вопроса").form__block-input
+                      textarea(type="text" placeholder="Требуется ваша помощь в создании сайта. \n Интересуют сроки и цена вопроса").form__block-input
                   button(type='submit').button Отправить
         footer.footer
           .container.footer__container
@@ -194,7 +194,7 @@ html(lang="en")
                           +icon(`${item}`, 'socials__icon')
                 .footer__data-col
                   article.footer__text
-                    p Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает где вы живете
+                    p.footer__text-desc Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает где вы живете
                     p.footer__text-auth Martin Golding
 
 
