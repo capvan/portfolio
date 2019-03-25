@@ -153,9 +153,13 @@ html(lang="en")
         .bottom-section
           .container.bottom-section__container 
             section.reviews
-              .reviews__title
-                .section-title Что обо мне говорят
-                .reviews__slider-controls
+              .reviews__header
+                .reviews__title
+                  .section-title Что обо мне говорят
+                .reviews__buttons
+                  button.reviews__btn.reviews__btn--prev
+                  button.reviews__btn.reviews__btn--next
+                //- .reviews__slider-controls
               ul.reviews__slider
                 - for (var i = 0; i < 2; i++)
                   li.reviews__slider-item
@@ -169,8 +173,7 @@ html(lang="en")
                             .user__name Ковальчук Дмитрий
                             .user__occ Основатель Loftschool
             section.form
-              .reviews__title
-                .section-title Связаться со мной
+              .section-title Связаться со мной
               form(action="").form
                 .form__row
                   label(for="").form__block
