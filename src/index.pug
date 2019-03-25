@@ -88,100 +88,102 @@ html(lang="en")
             polygon(
               points="0,100 1000,100 1000,0"
             )
-        section.values
-          .container
-            .values__title
-              h2.section-title.values__title-text.section-title--small Чем я могу быть полезен вам
-              .values__desc
-                p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
-            ul.user-skills
-              - 
-                var skills = [
-                  ['Front-end', ['HTML5', 'CSS3', 'JavaScript', 'JQuery и Vue.js']],
-                  ['Workflow', ['Git', 'Terminal', 'Gulp', 'Webpack']],
-                ]
-              each item in skills
-                li.user-skills__item.skills-row
-                  h3.skills-row__title #{item[0]}
-                  ul.skills-row__list
-                    each skill in item[1]
-                      li.skills-row__item
-                        .skill
-                          svg(viewBox="0 0 100 100" preserveAspectRatio="none").skill__shape
-                            circle(
-                              r="40" cx="50" cy="50"
-                            ).skill__circle.skill__circle--under
-                            circle(
-                              r="40" cx="50" cy="50"
-                              ).skill__circle.skill__circle--above
-                            linear-gradient()
-                          .skill__title #{skill}
-            .bottom-section
-              section.works
-                .container.works__container
-                  .section-title Мои работы
-                  .works__content
-                    .works-slider
-                      .works-slider__bigslider(data-slide='3')
-                        img(src="/src/images/content/slider.jpg", alt="слайдер").works-slider__bigslider-pic
-                      ul.works-slider__smallslider
-                        li.works-slider__smallslide-item
-                          a.works-slider__smallslider-link(href="#")
-                            img(src="/src/images/content/slider1.jpg", alt="слайдер1").works-slider__smallslider-pic
-                        li.works-slider__smallslide-item
-                          a.works-slider__smallslider-link(href="#")
-                            img(src="/src/images/content/slider2.jpg", alt="слайдер2").works-slider__smallslider-pic
-                        li.works-slider__smallslide-item
-                          a.works-slider__smallslider-link(href="#")
-                            img(src="/src/images/content/slider3.jpg", alt="слайдер3").works-slider__smallslider-pic
-                      .works-slider__buttons
-                        a(href="#").works-slider__btn.works-slider__btn--next
-                        a(href="").works-slider__btn.works-slider__btn--prev
-                    .works-slider__data
-                      ul.level
-                        li.level__item
-                          .level__desc Html
-                        li.level__item
-                          .level__desc CSS
-                        li.level__item
-                          .level__desc Javascript
-                      h2.section-title.section-title--small.section-title--small__left Сайт школы образования
-                      .works-slider__desc
-                        p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
-                      .works-slider__link
-                        a(href="#").works-slider__link-link Посмотреть сайт
-              section.reviews
-                .reviews__title
-                  .section-title Что обо мне говорят
-                  .reviews__slider-controls
-                ul.reviews__slider
-                  - for (var i = 0; i < 2; i++)
-                    li.reviews__slider-item
-                      .quote
-                        .quote__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
-                        .quote__author
-                          .user.user-horizontal
-                            .user__avatar.user__avatar--small
-                              img(src="/src/images/content/user.jpg", alt="аватар").user__avatar-pic
-                            .user__data
-                              .user__name Ковальчук Дмитрий
-                              .user__occ Основатель Loftschool
-              section.form
-                .reviews__title
-                  .section-title Связаться со мной
-                form(action="").form
-                  .form__row
-                    label(for="").form__block
-                      .form__block-title.form__block-title--first Введите ваше имя
-                      input(type="text" placeholder="Ковальчук Дмитрий").form__block-input
-                    label(for="").form__block
-                      .form__block-title.form__block-title--second Введите ваш e-mail
-                      input(type="text" placeholder="loftschool@study.com").form__block-input
-                  .form__row
-                    label(for="").form__block
-                      .form__block-title.form__block-title--third Сообщение к письму
-                      textarea(type="text" placeholder="Требуется ваша помощь в создании сайта. \n Интересуют сроки и цена вопроса").form__block-input
-                  button(type='submit').button Отправить
+        .middle-section
+          section.values
+            .container
+              .values__title
+                h2.section-title.values__title-text.section-title--small Чем я могу быть полезен вам
+                .values__desc
+                  p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+              ul.user-skills
+                - 
+                  var skills = [
+                    ['Front-end', ['HTML5', 'CSS3', 'JavaScript', 'JQuery и Vue.js']],
+                    ['Workflow', ['Git', 'Terminal', 'Gulp', 'Webpack']],
+                  ]
+                each item in skills
+                  li.user-skills__item.skills-row
+                    h3.skills-row__title #{item[0]}
+                    ul.skills-row__list
+                      each skill in item[1]
+                        li.skills-row__item
+                          .skill
+                            svg(viewBox="0 0 100 100" preserveAspectRatio="none").skill__shape
+                              circle(
+                                r="40" cx="50" cy="50"
+                              ).skill__circle.skill__circle--under
+                              circle(
+                                r="40" cx="50" cy="50"
+                                ).skill__circle.skill__circle--above
+                              linear-gradient()
+                            .skill__title #{skill}
+            section.works
+              .container.works__container
+                .section-title Мои работы
+                .works__content
+                  .works-slider
+                    .works-slider__bigslider(data-slide='3')
+                      img(src="/src/images/content/slider.jpg", alt="слайдер").works-slider__bigslider-pic
+                    ul.works-slider__smallslider
+                      li.works-slider__smallslide-item
+                        a.works-slider__smallslider-link(href="#")
+                          img(src="/src/images/content/slider1.jpg", alt="слайдер1").works-slider__smallslider-pic
+                      li.works-slider__smallslide-item
+                        a.works-slider__smallslider-link(href="#")
+                          img(src="/src/images/content/slider2.jpg", alt="слайдер2").works-slider__smallslider-pic
+                      li.works-slider__smallslide-item
+                        a.works-slider__smallslider-link(href="#")
+                          img(src="/src/images/content/slider3.jpg", alt="слайдер3").works-slider__smallslider-pic
+                    .works-slider__buttons
+                      a(href="#").works-slider__btn.works-slider__btn--next
+                      a(href="").works-slider__btn.works-slider__btn--prev
+                  .works-slider__data
+                    ul.level
+                      li.level__item
+                        .level__desc Html
+                      li.level__item
+                        .level__desc CSS
+                      li.level__item
+                        .level__desc Javascript
+                    h2.section-title.section-title--small.section-title--small__left Сайт школы образования
+                    .works-slider__desc
+                      p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                    .works-slider__link
+                      a(href="#").works-slider__link-link Посмотреть сайт
+        .bottom-section
+          .container.bottom-section__container 
+            section.reviews
+              .reviews__title
+                .section-title Что обо мне говорят
+                .reviews__slider-controls
+              ul.reviews__slider
+                - for (var i = 0; i < 2; i++)
+                  li.reviews__slider-item
+                    .quote
+                      .quote__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
+                      .quote__author
+                        .user.user-horizontal
+                          .user__avatar.user__avatar--small
+                            img(src="/src/images/content/user.jpg", alt="аватар").user__avatar-pic
+                          .user__data
+                            .user__name Ковальчук Дмитрий
+                            .user__occ Основатель Loftschool
+            section.form
+              .reviews__title
+                .section-title Связаться со мной
+              form(action="").form
+                .form__row
+                  label(for="").form__block
+                    .form__block-title.form__block-title--first Введите ваше имя
+                    input(type="text" placeholder="Ковальчук Дмитрий").form__block-input
+                  label(for="").form__block
+                    .form__block-title.form__block-title--second Введите ваш e-mail
+                    input(type="text" placeholder="loftschool@study.com").form__block-input
+                .form__row
+                  label(for="").form__block
+                    .form__block-title.form__block-title--third Сообщение к письму
+                    textarea(type="text" placeholder="Требуется ваша помощь в создании сайта. \n Интересуют сроки и цена вопроса").form__block-input
+                button(type='submit').button Отправить
         footer.footer
           .container.footer__container
             .footer__copyright
