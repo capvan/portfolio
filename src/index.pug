@@ -18,7 +18,7 @@ html(lang="en")
           section.hero
             .container.hero__container
               header.header
-                .logo СК
+                .logo ВА
                 .header__menu
                   nav.nav
                     ul.nav__list
@@ -37,7 +37,7 @@ html(lang="en")
                 .user-info
                   .user-info__desc Личный сайт 
                     p веб разработчика
-                  .user-info__name Сергей Кривенко
+                  .user-info__name Владимир Астаханов
               .hero__bottom-buttons
                 .scroll-down-button Скролл
           section.about
@@ -48,16 +48,6 @@ html(lang="en")
                     img(src="./src/images/content/user.jpg", alt="аватар").user__avatar-pic
                   .user__data
                     table.user__data-table
-                      //- - 
-                      //-   var data = [
-                      //-     ['Проживаю:', 'Москва'],
-                      //-     ['Возраст:', '28 лет'],
-                      //-     ['Родился:', '10 октября 1990'],
-                      //-   ]
-                      //- each row in data
-                      //-   tr.user__data-row
-                      //-     td.user__data-cell #{row[0]}
-                      //-     td.user__data-cell #{row[1]}
                       tbody
                         tr
                           td.user-table__title Проживаю:
@@ -73,7 +63,7 @@ html(lang="en")
                         tr
               .about__right
                 .about__welcome Привет, меня зовут
-                .about__username Сергей Кривенко
+                .about__username Владимир Астаханов
                 .about__desc 
                   p Я занимаюсь разработкой современных сайтов и приложений.
                   p Мне нравится делать интересные и современные проекты.
@@ -110,12 +100,14 @@ html(lang="en")
                           .skill
                             svg(viewBox="0 0 100 100" preserveAspectRatio="none").skill__shape
                               circle(
-                                r="40" cx="50" cy="50"
+                                r="40" cx="50" cy="50" 
                               ).skill__circle.skill__circle--under
                               circle(
-                                r="40" cx="50" cy="50"
+                                r="40" cx="50" cy="50" stroke="url(#gradient)" transform="rotate(180 50 50)"
                                 ).skill__circle.skill__circle--above
-                              linear-gradient()
+                              linearGradient(id="gradient" x1="0%" y1="0%" x2="100%" y2="0")
+                                stop(offset="0%" stop-color="#5500f2")
+                                stop(offset="100%" stop-color="#8f00ef")
                             .skill__title #{skill}
             section.works
               .container.works__container
@@ -159,7 +151,6 @@ html(lang="en")
                 .reviews__buttons
                   button.reviews__btn.reviews__btn--prev
                   button.reviews__btn.reviews__btn--next
-                //- .reviews__slider-controls
               ul.reviews__slider
                 - for (var i = 0; i < 2; i++)
                   li.reviews__slider-item

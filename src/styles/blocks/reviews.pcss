@@ -1,6 +1,9 @@
 .reviews {
     margin-bottom: 200px;
-    // background: url(/src/images/content/mountains.png) center center / cover no-repeat
+}
+
+.bottom-section__reviews {
+    width: 90%;
 }
 
 .reviews__header {
@@ -14,22 +17,15 @@
 .reviews__slider {
     display: flex;
     flex-direction: row;
-    // justify-content: flex-end;
 }
 
 .reviews__slider-item {
     display: flex;
-    // flex-direction: column;
-    width: 34%;
-    margin-left: 10%;
+    width: 50%;
+    margin-left: 20px;
 
-    &::before {
-        // content: svg-load('quote.svg', fill=$text-color, width=69px, height=58px);
-        content: "";
-        background: svg-load('quote.svg', fill=#414c63, width=69px, height=59px) top center no-repeat;
-        display: flex;
-        width: 100%;
-        opacity: .05;
+    &:first-child {
+        margin-left: 0;
     }
 }
 
@@ -37,18 +33,30 @@
     display: flex;
     align-items: center;
 }
-.user__data {
-    margin-left: 20px;
+
+.quote {
+    position: relative;
+    padding-left: 20%;
+
+    &::before {
+        content: "";
+        background: svg-load('quote.svg', fill=#414c63, width=100%, height=100%) top center no-repeat;
+        display: flex;
+        width: 100%;
+        opacity: .05;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 18%;
+        height: 37%;
+    }
 }
 
 .quote__text,
 .user__occ {
-    font-size: 16px;
     font-weight: 600;
-    font-style: normal;
-    font-stretch: normal;
     line-height: 1.88;
-    letter-spacing: normal;
     text-align: left;
     color: rgba(65, 76, 99, 0.5);
 }
@@ -56,10 +64,7 @@
 .user__name {
     font-size: 18px;
     font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
     line-height: 2.67;
-    letter-spacing: normal;
     text-align: left;
     color: #414c63;
 }
