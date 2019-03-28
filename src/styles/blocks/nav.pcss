@@ -13,9 +13,15 @@
 
 .nav__item {
     margin-right: 60px;
+    border-bottom: 3px solid transparent;
+    transition: border-bottom-color .2s;
 
     &:last-child {
         margin-right: 0;
+    }
+
+    &:hover {
+        border-bottom-color: #5500f2;
     }
 }
 
