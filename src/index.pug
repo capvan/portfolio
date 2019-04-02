@@ -111,7 +111,7 @@ html(lang="en")
                             .skill__title #{skill}
             section.works
               .container.works__container
-                .section-title.works__title Мои работы
+                .section-title Мои работы
                 .works__content
                   .works-slider
                     .works-slider__bigslider(data-slide='3')
@@ -163,24 +163,39 @@ html(lang="en")
                           .user__data
                             .user__name Ковальчук Дмитрий
                             .user__occ Основатель Loftschool
-            section.section-form
+            section.form
               .section-title Связаться со мной
-              //- form(action="").form
-              //-   .form__row
-              //-     label(for="").form__block
-              //-       .form__block-title.form__block-title--first Введите ваше имя
-              //-       input(type="text" placeholder="Ковальчук Дмитрий").form__block-input
-              //-     label(for="").form__block
-              //-       .form__block-title.form__block-title--second Введите ваш e-mail
-              //-       input(type="text" placeholder="loftschool@study.com").form__block-input
-              //-   .form__row
-              //-     label(for="").form__block
-              //-       .form__block-title.form__block-title--third Сообщение к письму
-              //-       textarea(type="text" placeholder="Требуется ваша помощь в создании сайта. \n Интересуют сроки и цена вопроса").form__block-input
-              //-   button(type='submit').button Отправить
-              .form
+              form(action="").form
+                //- .form__row
+                //-   label(for="").form__block
+                //-     .form__block-title.form__block-title--first Введите ваше имя
+                //-     input(type="text" placeholder="Ковальчук Дмитрий").form__block-input
+                //-   label(for="").form__block
+                //-     .form__block-title.form__block-title--second Введите ваш e-mail
+                //-     input(type="text" placeholder="loftschool@study.com").form__block-input
+                //- .form__row
+                //-   label(for="").form__block
+                //-     .form__block-title.form__block-title--third Сообщение к письму
+                //-     textarea(type="text" placeholder="Требуется ваша помощь в создании сайта. \n Интересуют сроки и цена вопроса").form__block-input
+
                 .form__row
                   label(for="", data-title="Введите ваше имя").form__block
+                    .form-block__container
+                      +icon('user', 'form__icon')
+                      .form__block-field
+                        input(type="text" placeholder="Ковальчук Дмитрий").form__block-input
+                  label(for="", data-title="Введите ваш email").form__block
+                    .form-block__container
+                      +icon('envelope', 'form__icon')
+                      .form__block-field
+                        input(type="text" placeholder="loftschool@study.com").form__block-input
+                .form__row
+                  label(for="", data-title="Введите сообщение к письму").form__block
+                    .form-block__container
+                      +icon('message', 'form__icon')
+                      .form__block-field
+                        textarea(placeholder='Требуется ваша помощь в создании сайта.\nИнтересуют сроки и цена вопроса').form__block-textarea
+                button(type='submit').button Отправить
         footer.footer
           .container.footer__container
             .footer__copyright

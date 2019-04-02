@@ -4,6 +4,14 @@
 
 .form {
     margin-top: 80px;
+    position: relative;
+
+    &::after {
+        content: url('/src/images/content/buddha.png');
+        position: absolute;
+        bottom: 35%;
+        right: -3%;
+    }
 }
 
 .form__container {
@@ -25,6 +33,15 @@
     width: 408px;
     margin-right: 50px;
     margin-bottom: 30px;
+
+    &:before {
+        content: attr(data-title);
+        margin-bottom: 21px;
+        display: block;
+        font-weight: 600;
+        color: rgba($text-color, .3);
+        margin-left: 50px;
+      }
 }
 
 .form__block-title {
@@ -52,6 +69,22 @@
     // }
 }
 
+.form-block__container {
+    display: flex;
+}
+
+.form__icon {
+    width: 26px;
+    height: 26px;
+    margin-right: -25px;
+    margin-bottom: 5px;
+    opacity: 0.3;
+    fill: #414c63;   
+}
+
+.form__block-field {
+    width: 100%;
+}
 .form__block-input {
     width: 100%;
     height: 100%;
@@ -64,6 +97,27 @@
     font-size: 18px;
     font-weight: bold;
     line-height: 2.67;
+    text-align: left;
+    color: #414c63;
+    background: inherit;
+
+    padding-left: 30px;
+
+    resize: vertical;
+}
+
+.form__block-textarea {
+    width: 100%;
+    height: 100%;
+
+    border-bottom: 1px solid #414c63;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 25px;
     text-align: left;
     color: #414c63;
     background: inherit;
