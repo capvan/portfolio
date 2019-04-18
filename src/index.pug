@@ -19,6 +19,11 @@ html(lang="en")
             .container.hero__container
               header.header
                 .logo ВА
+                .hamburger-menu
+                  a(href="", id="toggle").hamburger-menu-link
+                    span.hamburger-menu__item
+                    span.hamburger-menu__item
+                    span.hamburger-menu__item
                 .header__menu
                   nav.nav
                     ul.nav__list
@@ -65,14 +70,13 @@ html(lang="en")
                 .about__welcome Привет, меня зовут
                 .about__username Владимир Астаханов
                 .about__desc 
-                  p Я занимаюсь разработкой современных сайтов и приложений.
-                  p Мне нравится делать интересные и современные проекты.
+                  p Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
                 .about__ps
                   p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво! 
         .triangles
           svg.triangles__item.triangles__item--left(viewBox="0 0 1000 100" preserveAspectRatio="none")
             polygon(
-              points="0,0 0,100 1000,100"
+              points="0,50 50,100 1000,100"
             )
           svg.triangles__item.triangles__item--right(viewBox="0 0 1000 100" preserveAspectRatio="none")
             polygon(
@@ -163,7 +167,7 @@ html(lang="en")
                           .user__data
                             .user__name Ковальчук Дмитрий
                             .user__occ Основатель Loftschool
-            section.form
+            section.section-form
               .section-title Связаться со мной
               form(action="").form
                 .form__row
@@ -211,7 +215,6 @@ html(lang="en")
                   article.footer__quote
                     p Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает где вы живете
                   .footer__text-auth Martin Golding
-                  h2 Тест деплой заголовок
 
 
 

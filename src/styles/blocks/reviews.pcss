@@ -8,6 +8,11 @@
 
 .reviews__header {
     position: relative;
+
+    @include phones() {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .reviews__title {
@@ -19,6 +24,14 @@
     flex-direction: row;
     margin-top: 5%;
     width: 80%;
+
+    @include tablets() {
+        width: 95%;
+    }
+
+    @include phones() {
+        display: block;
+    }
 }
 
 .reviews__slider-item {
@@ -28,6 +41,14 @@
 
     &:first-child {
         margin-left: 0;
+    }
+
+    @include phones() {
+        width: 98%;
+
+        &:last-child {
+            display: none;
+        }
     }
 }
 
@@ -39,6 +60,10 @@
 .quote {
     position: relative;
     padding-left: 20%;
+
+    @include phones() {
+        padding-left: 0;
+    }
 
     &::before {
         content: "";
@@ -52,6 +77,10 @@
         display: block;
         width: 18%;
         height: 37%;
+
+        @include phones() {
+            display: none;
+        }
     }
 }
 
@@ -62,6 +91,10 @@
     text-align: left;
     color: rgba(65, 76, 99, 0.5);
     margin-bottom: 50px;
+
+    @include phones() {
+        margin-bottom: 25px;
+    }
 }
 
 .user__name {

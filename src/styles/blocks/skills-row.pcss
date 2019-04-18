@@ -8,6 +8,10 @@
     &:last-child {
         margin-bottom: 0;
     }
+
+    @include phones() {
+        width: 100%;
+    }
 }
 
 .skills-row__title {
@@ -17,10 +21,26 @@
     line-height: 2;
     text-align: left;
     color: #414c63;
+
+    @include tablets() {
+        text-align: center;
+        font-size: 20px;
+        margin-top: -20px;
+        margin-right: 17px;
+    }
+
+    @include phones() {
+        margin-top: -10px;
+        letter-spacing: 1px;
+    }
 }
 
 .skills-row__item {
     margin-bottom: 2%;
+
+    @include phones() {
+        width: 50%;
+    }
 }
 
 .skills-row__list {
@@ -30,5 +50,10 @@
 
     &:last-child {
         margin-bottom: 0;
+    }
+
+    @include phones() {
+        flex-wrap: wrap;
+        flex: 1;
     }
 }

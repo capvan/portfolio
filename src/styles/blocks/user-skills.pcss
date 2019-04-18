@@ -6,6 +6,14 @@
     align-items: flex-end;
     margin-bottom: 90px;
 
+    @include tablets() {
+        align-items: center;
+    }
+
+    @include phones() {
+        align-items: end;
+    }
+
     &::before {
         z-index: -1;
         content: '';
@@ -17,5 +25,17 @@
         position: absolute;
         bottom: 100px;
         left: -15%;
+
+        @include tablets() {
+            height: 60%;
+            bottom: -80%;
+            left: 33%;
+        }
+
+        @include phones() {
+            height: 50%;
+            bottom: -54%;
+            left: 10%;
+        }
     }
 }

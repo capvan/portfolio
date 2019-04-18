@@ -12,6 +12,15 @@
     text-align: center;
     color: #ffffff;
 
+    @include tablets() {
+        margin-left: 30%;
+    }
+
+    @include phones() {
+        margin-left: 0;
+        width: 330px;
+    }
+
     &:hover {
         color: #ffffff;
         background: linear-gradient(45deg, #CD853F, #A52A2A);

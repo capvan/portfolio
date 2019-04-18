@@ -1,0 +1,37 @@
+.hamburger-menu-link {
+    width: 25px;
+    height: 24px;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+
+    // display: none;
+    position: fixed;
+
+    // display: flex;
+    flex-direction: column;
+
+    @include tablets() {
+        display: flex;
+        top: 60px;
+        right: 32px;
+    }
+
+    @include phones() {
+        top: 83px;
+        right: 36px;
+        width: 29px;
+    }
+}
+.hamburger-menu__item {
+    height: 100%;
+    width: 100%;
+    margin-bottom: 5px;
+
+    background-color: #414c63;
+    border-radius: 10%;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

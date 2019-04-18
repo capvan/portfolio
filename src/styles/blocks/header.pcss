@@ -3,6 +3,17 @@
     justify-content: space-between;
     margin-top: 20px;
     align-items: center;
+
+    @include tablets() {
+        margin-top: 60px;
+        margin-left: 20px;
+        // margin: 60px 0 0 20px;
+    }
+
+    @include phones() {
+        margin-top: 75px;
+        margin-left: 3px;
+    }
 }
 
 .header__menu {
@@ -10,6 +21,17 @@
     display: flex;
     justify-content: center;
     margin: 0 20px;
+}
+
+.header__links {
+
+    @include tablets() {
+        margin-right: 20%;
+    }
+
+    @include phones() {
+        display: none;
+    }
 }
 
 .logo {
@@ -20,4 +42,12 @@
     line-height: 0.83;
     text-align: left;
     color: #414c63;
+
+    @include tablets() {
+        font-size: 40px;
+    }
+
+    @include phones() {
+        font-size: 45px;
+    }
 }
