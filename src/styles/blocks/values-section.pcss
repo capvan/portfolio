@@ -11,4 +11,15 @@
 
     margin: 0 32%;
     width: 50%;
+
+    @include tablets() {
+        width: 60%;
+        margin-left: 21%;
+    }
+
+    @include phones() {
+        width: 99%;
+        margin-left: 0;
+        letter-spacing: 0.8px;
+    }
 }

@@ -18,7 +18,12 @@ html(lang="en")
           section.hero
             .container.hero__container
               header.header
-                .logo ВА
+                .logo SK
+                .hamburger-menu
+                  a(href="", id="toggle").hamburger-menu-link
+                    span.hamburger-menu__item
+                    span.hamburger-menu__item
+                    span.hamburger-menu__item
                 .header__menu
                   nav.nav
                     ul.nav__list
@@ -37,7 +42,7 @@ html(lang="en")
                 .user-info
                   .user-info__desc Личный сайт 
                     p веб разработчика
-                  .user-info__name Владимир Астаханов
+                  .user-info__name Сергей Кривенко
               .hero__bottom-buttons
                 .scroll-down-button Скролл
           section.about
@@ -45,7 +50,7 @@ html(lang="en")
               .about__left
                 .user
                   .user__avatar
-                    img(src="./src/images/content/user.jpg", alt="аватар").user__avatar-pic
+                    img(src="./src/images/content/logotip.jpg", alt="аватар").user__avatar-pic
                   .user__data
                     table.user__data-table
                       tbody
@@ -63,16 +68,15 @@ html(lang="en")
                         tr
               .about__right
                 .about__welcome Привет, меня зовут
-                .about__username Владимир Астаханов
+                .about__username Сергей Кривенко
                 .about__desc 
-                  p Я занимаюсь разработкой современных сайтов и приложений.
-                  p Мне нравится делать интересные и современные проекты.
+                  p Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
                 .about__ps
                   p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво! 
         .triangles
           svg.triangles__item.triangles__item--left(viewBox="0 0 1000 100" preserveAspectRatio="none")
             polygon(
-              points="0,0 0,100 1000,100"
+              points="0,50 50,100 1000,100"
             )
           svg.triangles__item.triangles__item--right(viewBox="0 0 1000 100" preserveAspectRatio="none")
             polygon(
@@ -163,7 +167,7 @@ html(lang="en")
                           .user__data
                             .user__name Ковальчук Дмитрий
                             .user__occ Основатель Loftschool
-            section.form
+            section.section-form
               .section-title Связаться со мной
               form(action="").form
                 .form__row

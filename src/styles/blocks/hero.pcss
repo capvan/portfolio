@@ -24,6 +24,16 @@
 .user-info {
   display: flex;
   justify-content: center;
+
+  @include tablets() {
+    flex-direction: column;
+    align-items: center;
+    margin-top: -44%;
+  }
+
+  @include phones() {
+    margin-top: -30%;
+  }
 }
 
 .user-info__desc {
@@ -34,6 +44,16 @@
   text-align: right;
   color: rgba(65, 76, 99, 0.4);
   margin-right: 55px;
+
+  @include tablets() {
+    text-align: center;
+    margin-right: 0;
+    margin-bottom: 5%;
+  }
+
+  @include phones() {
+    margin-bottom: 0;
+  }
 }
 
 .user-info__name {
@@ -44,6 +64,18 @@
   line-height: 0.83;
   text-align: left;
   color: #414c63;
+
+  @include tablets() {
+    text-align: center;
+    font-size: 56px;
+    line-height: .95;
+  }
+
+  @include phones() {
+    font-size: 41px;
+    letter-spacing: 2px;
+    line-height: 50px;
+  }
 }
 
 .scroll-down-button {
@@ -55,13 +87,17 @@
   display: flex;
   margin-bottom: 8%;
 
-  &::after {
-    content: "";
-    background: svg-load('scroll.svg', fill=#414c63, width=100%, height=100%) center center no-repeat;
-    background-size: 28px 28px;
-    height: 28px;
-    width: 28px;
-    margin-left: 15px;
-  }
+    &::after {
+      content: "";
+      background: svg-load('scroll.svg', fill=#414c63, width=100%, height=100%) center center no-repeat;
+      background-size: 28px 28px;
+      height: 28px;
+      width: 28px;
+      margin-left: 15px;
+    }
+
+    @include tablets() {
+      display: none;
+    }
 }
 

@@ -2,22 +2,47 @@
     display: flex;
     justify-content: space-between;
     padding: 250px 0 80px;
+
+    @include tablets() {
+        padding: 0;
+    }
+
+    @include phones() {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10%;
+    }
 }
 
 .about__left {
     width: 33%;
+
+    @include phones() {
+        width: 100%;
+    }
 }
 
 .user__avatar {
     width: 200px;
     height: 200px;
-    margin: 0 auto;
-    margin-bottom: 90px;
+    margin: 0 auto 90px;
+
+    @include tablets() {
+        margin: 0 auto 48px;
+    }
+
+    @include phones() {
+        margin: 0 auto 33px;
+    }
+
     &--small {
         width: 75px;
         height: 75px;
-        margin: 0;
-        margin-right: 15px;
+        margin: 0 15px 0 0;
+
+        @include tablets() {
+            margin: 0 15px 48px 0;
+        }
     }
 }
 
@@ -27,6 +52,15 @@
 
 .about__right {
     width: 58%;
+
+    @include tablets() {
+        width: 53%;
+    }
+
+    @include phones() {
+        margin-top: 11%;
+        width: 92%;
+    }
 }
 
 .about__welcome {
@@ -36,6 +70,10 @@
     color: rgba(65, 76, 99, 0.5);
 
     margin-bottom: 30px;
+
+    @include tablets() {
+        margin-bottom: 0;
+    }
 }
 
 .about__username {
@@ -46,18 +84,35 @@
     color: #414c63;
 
     margin-bottom: 38px;
+
+    @include tablets() {
+        margin-bottom: 48px;
+        line-height: 1.2;
+    }
+
+    @include phones() {
+        margin-top: 7%;
+    }
 }
 
 .about__desc {
+    width: 75%;
     font-weight: 600;
     line-height: 1.88;
     text-align: left;
     color: rgba(65, 76, 99, 0.5);
 
     margin-bottom: 85px;
+
+    @include tablets() {
+        width: 100%;
+        line-height: 1.9;
+        margin-bottom: 37px;
+    }
 }
 
 .about__ps {
+    width: 75%;
     font-style: italic;
     line-height: 1.88;
     text-align: left;
@@ -69,5 +124,13 @@
         content: url('/src/images/content/quote.png');
         margin-left: -40px;
         margin-right: 20px;
+    }
+
+    @include tablets() {
+        width: 88%;
+    }
+
+    @include phones() {
+        width: 100%;
     }
 }

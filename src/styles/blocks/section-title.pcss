@@ -3,12 +3,46 @@
     font-weight: bold;
     text-align: left;
 
+    @include tablets() {
+        text-align: center;
+    }
+
+    @include phones() {
+        font-size: 29px;
+    }
+
     &--small {
         font-size: 28px;
         text-align: center;
+
+        @include tablets() {
+            width: 45%;
+            margin-left: 26%;
+            font-size: 32px;
+            line-height: 43px;
+            letter-spacing: 1.3px;
+        }
+
+        @include phones() {
+            width: 100%;
+            margin-left: 0;
+            text-align: left;
+            font-size: 30px;
+            letter-spacing: 0;
+        }
     }
 
     &--small__left {
         text-align: left;
+
+        @include tablets() {
+            margin-left: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        @include phones() {
+            text-align: left;
+        }
     }
 }
